@@ -6,11 +6,11 @@ const page = () => {
   return (
     <section className='flex flex-1 items-center justify-between gap-4'>
       <div className='flex-1'>
-        <h1 className='text-2xl font-bold tracking-tighter'>
+        <h1 className='text-3xl font-bold tracking-tight'>
           Cloud Based <span className='text-primary'>Job Application</span>{' '}
           Tracker
         </h1>
-        <p className='tracking-wider text-sm'>
+        <p className='tracking-wider '>
           Streamline Your Job Hunt, Anytime, Anywhere!
         </p>
         <p className='my-6'>
@@ -25,8 +25,8 @@ const page = () => {
           <Button variant='outline'>Discover Technologies</Button>
         </div>
       </div>
-      <div className='flex-1 flex justify-center'>
-        <Image src={bannerImage} width={500} alt='AppTracker' />
+      <div className='flex-1 flex justify-end'>
+        <Image src={bannerImage} width={530} alt='AppTracker' />
       </div>
     </section>
   )

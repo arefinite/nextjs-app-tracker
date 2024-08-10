@@ -31,7 +31,7 @@ export default function RootLayout({
           <Providers>
             <section className='flex flex-col min-h-screen'>
               <Header />
-              <main className='bg-primary-foreground container mx-auto flex-1 relative -mt-20 rounded-lg w-full'>
+              <main className='bg-primary-foreground container mx-auto flex-1 grid relative -mt-20 rounded-lg w-full'>
                 {children}
               </main>
               <Footer />

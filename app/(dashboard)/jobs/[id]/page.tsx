@@ -1,5 +1,3 @@
-
-
 import { getSingleJobAction } from '@/actions/getSingleJobAction';
 import EditJobForm from '@/components/job/editJob/EditJobForm';
 import {
