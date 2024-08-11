@@ -49,7 +49,7 @@ const JobCard = ({ job }: { job: JobType }) => {
   return (
     <Card className='w-full'>
       <CardHeader className='py-3'>
-        <CardTitle>{job.position}</CardTitle>
+        <CardTitle className='text-lg'>{job.position}</CardTitle>
         <CardDescription>
           {job.company.at(0)?.toUpperCase() + job.company.slice(1)}
         </CardDescription>
