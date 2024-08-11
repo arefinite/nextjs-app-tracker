@@ -17,7 +17,7 @@ const Navbar = () => {
                 i === navs.length - 1 ? 'rounded-r-md' : ''
               }  transition-all  delay-50 hover:opacity-90 flex items-center gap-2`}
             >
-              <span>{nav.icon}</span>
+              <span className='hidden md:block'>{nav.icon}</span>
               <span>{nav.label}</span>
             </li>
           </Link>

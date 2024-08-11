@@ -13,10 +13,11 @@ function BtnDeleteJob({ id }: { id: string }) {
         toast.error('something went wrong!')
         return
       }
-   
+
       queryClient.invalidateQueries({ queryKey: ['jobs'] })
       queryClient.invalidateQueries({ queryKey: ['reports'] })
-      queryClient.invalidateQueries({ queryKey: ['charts'] })
+      queryClient.invalidateQueries({ queryKey: ['dailyCharts'] })
+      queryClient.invalidateQueries({ queryKey: ['totalCharts'] })
 
       toast.success('Job deleted successfully')
     },

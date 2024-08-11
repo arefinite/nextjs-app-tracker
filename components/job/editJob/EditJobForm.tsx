@@ -51,7 +51,9 @@ function EditJobForm({ jobId }: { jobId: string }) {
       toast.success('job updated successfully')
       queryClient.invalidateQueries({ queryKey: ['jobs'] })
       queryClient.invalidateQueries({ queryKey: ['job', jobId] })
-      queryClient.invalidateQueries({ queryKey: ['stats'] })
+      queryClient.invalidateQueries({ queryKey: ['reports'] })
+      queryClient.invalidateQueries({ queryKey: ['dailyCharts'] })
+      queryClient.invalidateQueries({ queryKey: ['totalCharts'] })
       router.push('/jobs')
     },
   })
@@ -74,7 +76,7 @@ function EditJobForm({ jobId }: { jobId: string }) {
   }
 
   return (
-    <Card className='w-[700px]'>
+    <Card className='w-full xl:w-[700px]'>
       <CardHeader>
         <CardTitle>Edit Applied Job</CardTitle>
         <CardDescription>Edit job details you have applied</CardDescription>
@@ -82,7 +84,7 @@ function EditJobForm({ jobId }: { jobId: string }) {
       <CardContent>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
-            <div className='grid grid-cols-2 gap-4'>
+            <div className='grid grid-cols-1 xl:grid-cols-2 gap-4'>
               <CustomTextField name='position' control={form.control} />
               <CustomTextField name='company' control={form.control} />
               <CustomTextField name='location' control={form.control} />
@@ -104,7 +106,7 @@ function EditJobForm({ jobId }: { jobId: string }) {
                 items={Object.values(WorkType)}
                 labelText='Job Type'
               />
-              <div className='col-span-2'>
+              <div className='xl:col-span-2'>
                 <CustomTextArea name='note' control={form.control} />
               </div>
             </div>

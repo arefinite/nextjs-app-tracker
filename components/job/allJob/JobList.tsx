@@ -3,6 +3,7 @@ import { useQuery } from '@tanstack/react-query'
 import { useSearchParams } from 'next/navigation'
 import JobCard from '@/components/job/allJob/JobCard'
 import { getAllJobsAction } from '@/actions/getAllJobsAction'
+import { Loader2 } from 'lucide-react'
 
 const JobList = () => {
   const searchParams = useSearchParams()
@@ -14,11 +15,11 @@ const JobList = () => {
     queryFn: () => getAllJobsAction({ search, jobStatus, page: pageNumber }),
   })
   const jobs = data?.jobs || []
-  if (isPending) return <p>Please wait...</p>
+  if (isPending) return <Loader2 className='animate-spin' />
   if (jobs.length < 1) return <p>No jobs found</p>
   return (
     <>
-      <div className='grid grid-cols-3 gap-4 w-full'>
+      <div className='grid grid-cols-1 xl:grid-cols-3 gap-4 w-full'>
         {jobs.map(job => (
           <JobCard key={job.id} job={job} />
         ))}

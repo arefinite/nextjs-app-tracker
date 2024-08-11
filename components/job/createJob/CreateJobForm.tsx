@@ -52,8 +52,9 @@ const CreateJobForm = () => {
       }
       toast.success('Job added successfully')
       queryClient.invalidateQueries({ queryKey: ['jobs'] })
+      queryClient.invalidateQueries({ queryKey: ['dailyCharts'] })
+      queryClient.invalidateQueries({ queryKey: ['totalCharts'] })
       queryClient.invalidateQueries({ queryKey: ['reports'] })
-      queryClient.invalidateQueries({ queryKey: ['charts'] })
       router.push('/jobs')
     },
   })
@@ -62,7 +63,7 @@ const CreateJobForm = () => {
     mutate(values)
   }
   return (
-    <Card className='w-[700px]'>
+    <Card className='w-full xl:w-[700px]'>
       <CardHeader>
         <CardTitle>Add Applied Job</CardTitle>
         <CardDescription>Add a job details you have applied</CardDescription>
@@ -70,7 +71,7 @@ const CreateJobForm = () => {
       <CardContent>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
-            <div className='grid grid-cols-2 gap-4'>
+            <div className='grid grid-cols-1 xl:grid-cols-2 gap-4'>
               <CustomTextField name='position' control={form.control} />
               <CustomTextField name='company' control={form.control} />
               <CustomTextField name='location' control={form.control} />
@@ -92,7 +93,7 @@ const CreateJobForm = () => {
                 items={Object.values(WorkType)}
                 labelText='Job Type'
               />
-              <div className='col-span-2'>
+              <div className='xl:col-span-2'>
                 <CustomTextArea name='note' control={form.control} />
               </div>
             </div>

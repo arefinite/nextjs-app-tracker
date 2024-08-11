@@ -1,11 +1,19 @@
 import Navbar from '@/components/shared/Navbar'
+import { RedirectToSignIn, SignedIn, SignedOut } from '@clerk/nextjs'
 
 const layout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
   return (
-    <section className='mt-8'>
-      <Navbar />
-      {children}
-    </section>
+    <>
+      <SignedIn>
+        <section className='my-8'>
+          <Navbar />
+          {children}
+        </section>
+      </SignedIn>
+      <SignedOut>
+        <RedirectToSignIn />
+      </SignedOut>
+    </>
   )
 }
 export default layout

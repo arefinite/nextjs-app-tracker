@@ -16,7 +16,7 @@ const JobTips = () => {
           sequence={tips.map(tip => [tip.tip, tip.delay]).flat()}
           wrapper='span'
           speed={50}
-          style={{ fontSize: '1em', display: 'inline-block' }}
+          className='inline-block'
           repeat={Infinity}
         />
       </AlertDescription>
