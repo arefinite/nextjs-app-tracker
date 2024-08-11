@@ -13,10 +13,11 @@ const SignInPage = () => {
           <AlertTitle>Demo Account</AlertTitle>
           <AlertDescription className='mt-2'>
             <p>
-              <span>Email:</span> demo@demo.com
+              Email:
+              <span className='text-primary ml-1'>demo@demo.com</span>
             </p>
             <p>
-              <span>Password:</span> 123456
+              Password:<span className='text-primary ml-1'>123456</span>
             </p>
           </AlertDescription>
         </div>
