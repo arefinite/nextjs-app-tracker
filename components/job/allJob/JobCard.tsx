@@ -78,8 +78,7 @@ const JobCard = ({ job }: { job: JobType }) => {
             <DrawerHeader>
               <DrawerTitle className='flex items-center gap-2'>
                 <Captions />
-                <span>You have applied position of</span>
-                {job.position}
+                <p className='text-left'>Applied position: {job.position}</p>
               </DrawerTitle>
               <DrawerDescription className='flex gap-2 items-center'>
                 <Building2 size={14} />

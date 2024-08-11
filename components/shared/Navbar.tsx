@@ -18,7 +18,7 @@ const Navbar = () => {
               }  transition-all  delay-50 hover:opacity-90 flex items-center gap-2`}
             >
               <span className='hidden md:block'>{nav.icon}</span>
-              <span>{nav.label}</span>
+              <span className='text-sm xl:text-base'>{nav.label}</span>
             </li>
           </Link>
         ))}

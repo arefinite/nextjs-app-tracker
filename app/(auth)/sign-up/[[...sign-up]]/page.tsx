@@ -4,7 +4,7 @@ import { Lock } from 'lucide-react'
 
 const SignUpPage = () => {
   return (
-    <div className='flex gap-2 flex-col'>
+    <div className='flex gap-2 flex-col mt-8'>
       <Alert className='flex items-center justify-center gap-2'>
         <div>
           <Lock color='red' />

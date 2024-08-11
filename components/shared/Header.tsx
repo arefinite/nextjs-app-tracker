@@ -15,8 +15,8 @@ import {
 
 const Header = () => {
   return (
-    <header className='h-48 bg-primary px-4 xl:px-0'>
-      <section className='container mx-auto p-0 flex justify-between pt-10'>
+    <header className='h-40 xl:h-48 bg-primary px-4 xl:px-0'>
+      <section className='container mx-auto p-0 flex justify-between pt-5 xl:pt-10'>
         <Link href='/'>
           <h1 className='flex items-center gap-1 md:text-3xl text-2xl font-bold text-white'>
             <span>

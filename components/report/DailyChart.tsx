@@ -36,9 +36,9 @@ const DailyChart = () => {
           Graphical interface of daily applied jobs
         </CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className=''>
         <ResponsiveContainer width='100%' height={300}>
-          <BarChart data={data} margin={{ top: 50 }}>
+          <BarChart data={data} margin={{ top: 50, left:-40 }}>
             <CartesianGrid strokeDasharray='3 3' />
             <XAxis dataKey='date' />
             <YAxis allowDecimals={false} />
