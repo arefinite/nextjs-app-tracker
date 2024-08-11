@@ -12,8 +12,8 @@ function StatsContainer() {
   const total = data && data?.Pending + data?.Interview + data?.Rejected
 
   return (
-    <div className='grid gap-4 grid-cols-1 xl:grid-cols-4'>
-      <ReportsCard title='total applied' value={total || 0} />
+    <div className='grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-4'>
+      <ReportsCard title='total applied jobs' value={total || 0} />
       <ReportsCard title='pending jobs' value={data?.Pending || 0} />
       <ReportsCard title='interviews set' value={data?.Interview || 0} />
       <ReportsCard title='jobs rejected' value={data?.Rejected || 0} />
